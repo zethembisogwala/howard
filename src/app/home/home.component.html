@@ -1,1 +1,14 @@
-<p class="navbar-text navbar-right navbar-inverse">Profile | <a (click)="logout()" class="navbar-link">Logout</a></p>
+<mat-toolbar class="fixed-top" color="primary">
+	<mat-menu #appMenu="matMenu">
+		<button mat-menu-item (click)="logout()">
+			Sign out
+		</button>
+	</mat-menu>
+
+	<a [matMenuTriggerFor]="appMenu">
+		<mat-icon>menu</mat-icon>
+	</a> 
+		
+	<span>Howard</span>
+
+</mat-toolbar>
